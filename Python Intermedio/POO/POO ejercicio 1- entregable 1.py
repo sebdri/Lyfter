@@ -1,5 +1,6 @@
 #    ------------<CAMBIOS SOLICITADOS>------------
 
+# Added def __init__(self, radius)
 
 class Circle: 
     
