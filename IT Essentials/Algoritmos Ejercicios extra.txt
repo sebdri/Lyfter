@@ -1,0 +1,84 @@
+Inicio
+
+1.Crear la lista de invitados.
+2.Enviar las invitaciones a todos los invitados excepto al cumpleañero.
+3.Comprar todo lo necesario para la fiesta (decoración, comida, bebidas, música).
+4.Definir la fecha y la hora de la fiesta.
+5.Verificar si la persona homenajeada está en casa:
+-Si está en casa:
+>Mantenerla fuera del lugar mientras se prepara la fiesta
+o
+>uscar otro lugar para realizar la fiesta.
+-Si no está en casa:
+>Decorar el lugar tranquilamente.
+6.Esperar la llegada de los invitados:
+-Si todos los invitados llegan:
+>Organizar el espacio según la cantidad de personas.
+-Si no llegan todos:
+>Organizar el lugar de igual manera, aunque sobre material.
+7.Mientras esperan al homenajeado:
+Poner música.
+Ofrecer snacks y bebidas a los invitados.
+8.Cuando llega la persona homenajeada:
+9.Apagar las luces.
+10.Dar la sorpresa con globos, confeti y aplausos.
+11.Disfrutar la fiesta (comida, música y actividades).
+12.Finalizar la fiesta con una despedida (por ejemplo, una cimarrona).
+
+Fin
+ 
+---------------------------------------------------------------------------------------------------------------------
+
+Inicio
+
+1.Revisar la fecha y el temario del examen.
+2.Reunir materiales de estudio
+3.Mientras no se sienta listo para el examen, repetiras:
+-Leer el tema correspondiente.
+-Repasar apuntes y resúmenes.
+-Practicar ejercicios o exámenes anteriores.
+4.Verificar comprensión del tema:
+-Si entiende la materia:
+>Continuar con el siguiente tema.
+Si tiene dudas:
+>Volver a leer el tema, buscar ayuda, practicar más ejercicios.
+5.Evaluar el nivel de preparación:
+Si esta listo:
+>dejas de estudiar.
+Si no estas listo:
+>Regresamas al punto #3.
+6.Descansar adecuadamente antes del examen.
+7.Preparar los materiales para el día del examen.
+
+Fin
+
+
+---------------------------------------------------------------------------------------------------------------------
+
+1.Compro los boletos definiendo fechas de ida y vuelta 
+2.Pago el hotel de estadia 
+3 Una vez se acerca el dia del viaje:
+-Preparo la ropa necesaria por llevar 
+Si tengo todo 
+>Preparo las maletas y las dejo listas 
+Si no 
+>Tomo mi tiempo para alistar el resto 
+4.Alisto los materiales como pasaporte, tiquetes, etc etc 
+Si lo tengo todo listo 
+>Alisto mi maleta de mano donde se llevaran los documentos 
+Si no 
+>Repito el proceso hasta estar listo 
+5.Una vez listo dejo todo los mas ordenado posible dentro de casa
+6.Dos dias antes reviso que este todo completo en relacion a documentos necesarios para el viaje 
+Si todo esta listo
+>Pongo candados a mis maletas 
+Si no 
+>Repito el paso 3 hasta estar listo 
+5.El dia del viaje me despierto temprano y me voy al aeropuerto 
+6.Espero la hora de salida 
+Si el avion no esta atrasado
+>Abordo cuando este permitido 
+si no
+>Me espero hasta que llegue 
+7.Tomo el vuelo a mi destino 
+Fin 

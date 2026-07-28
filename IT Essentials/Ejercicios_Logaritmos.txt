@@ -1,0 +1,57 @@
+Creando un algoritmo para ver un video en Youtube
+
+1. Prender la computadora
+2. Abrir un navegador
+3. Buscar (Youtube)
+4. Buscar el video que se desea ver 
+5. Ver el video
+6. Fin
+
+
+==================================================================
+
+Algoritmo de mi rutina 
+
+1. Suena la alarma.
+ >Mientras no sea hora de levantarse:
+2.Sigo durmiendo.
+3.Me levanto
+ >Veo la hora actual.
+
+4.Si es día laboral
+ >Me preparo para trabajar para trabajar.
+
+Si no
+ >Me duermo aun mas
+
+5.Ir al baño.
+6.Me cepillo los dientes.
+7.Me baño.
+8.Me Vesto
+9.Veo el tiempo disponible para desayunar.
+Si hay tiempo suficiente
+ >Me Preparo algo y desayuno.
+Si no
+ >Me voy
+10.Llego al trabajo 
+Mientras sea horario laboral 
+ >Realizar tareas asignadas.
+
+Tomo descansos cortos cada cierto tiempo.
+
+11.Al terminar el trabajo 
+12.Me voy para la casa en buseta
+Si la buseta ya llego
+>Me monto y me voy 
+Si no
+>Espero a que la buseta llegue
+13.Llego a la casa
+Si hay tiempo libre
+ >Descanso
+Si no
+ >Prepararse para dormir.
+14. Me cepillo los dientes.
+15. Me acuesto
+16. Me duermo
+
+Fin
