@@ -1,48 +1,50 @@
-
-
 class BankAccount:
-    def __init__(self, owner, balance):
-        if balance<0:
-            raise ValueError("The initial balance cannot be negative.")
+    def __init__(self, owner , balance):
+        if balance<=0:
+            raise ValueError("The initial balance cannot be negative")
 
         self.owner = owner
         self.balance = balance
 
 
-
-    def deposit_amount(self, amount):
+    def deposit(self, amount):
         if amount <= 0:
             raise ValueError("The amount to deposit cannot negative")
-
 
         self.balance += amount
 
 
     def withdraw(self, amount):
-        if amount <= 0:
-            raise ValueError("The withdrawal amount must be greater than zero.")
+        if amount <= 0 :
+            raise ValueError ("The withdrawal amount must be greater than zero")
 
-        if amount > self.balance:
-            raise ValueError ("Insufficient funds.")
+        if self.balance < amount:
+            raise ValueError ("Insufficient funds")
 
+        self.balance-=amount
 
-        self.balance -= amount
 
     def show_balance(self):
         return self.balance
 
+# ---<INTERACTIVE PART>---
 
+#creating the account
 while True:
     try:
-
-        owner = input("Enter  your name: ")
-        initial_balance = float(input("Enter the initial balance: "))
-        account = BankAccount(owner,initial_balance)
-
+        owner = input("Enter your name: ")
+        initial_balance = float(input("Enter your initial balance: "))
+        account = BankAccount(owner, initial_balance)
 
         break
+
     except ValueError as error:
-        print(error)
+        print (error)
+
+
+# ---<MENU>---
+
+#Creating the menu 
 
 
 def menu():
@@ -57,8 +59,8 @@ while True:
     option = input("Choose an option: ")
 
     if option == "1":
-        amount = float(input("Enter the amount to deposit: "))
-        account.deposit_amount(amount)
+        amount = float(input("Please enter the amount to deposit: "))
+        account.deposit(amount)
 
     elif option == "2":
         amount = float(input("Enter the amount to withdraw: "))
@@ -66,6 +68,8 @@ while True:
     elif option == "3":
         print(f'You current balance is: {account.show_balance()}') 
     elif option == "4":
+        print("You are exiting your bank account \n" \
+        "Bye Bye")
         break
     else:
         print("Invalid option.")
