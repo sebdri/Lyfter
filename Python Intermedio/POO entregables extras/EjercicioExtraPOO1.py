@@ -1,4 +1,4 @@
-class Rectangule:
+class Rectangle:
 
     def __init__(self, width, height):
 
@@ -14,7 +14,7 @@ class Rectangule:
 
 
     def get_perimeter(self):
-        return 2*(self.width* self.height)
+        return 2*(self.width + self.height)
 
 try:
     width = float(input("Enter the rectangle width: "))
