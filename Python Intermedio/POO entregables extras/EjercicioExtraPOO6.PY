@@ -1,4 +1,4 @@
-import datetime
+import datetime #libreria de python para llamar la hora y fecha de hoy
 
 class Car:
     def __init__(self, brand , model, year):
@@ -13,14 +13,13 @@ class Car:
         return f'Brand: {self.brand}\n Model: {self.model}\n Year: {self.year}'
 
     def is_classic(self):
-            current_year = datetime.datetime.now().year
+            current_year = datetime.datetime.now().year 
             age = current_year - self.year
 
             if age>25:
                 return "This car is classic"
             else:
                 return "This is not a classic car"
-
 
 
 
@@ -39,6 +38,7 @@ while True:
         print(error)
 
 
-print("\n===== CAR INFORMATION =====")
-print(car.car_information())
-print(car.is_classic())
+# print("\n===== CAR INFORMATION =====")
+# print(car.car_information())
+# print(car.is_classic())
+print(car.brand)
