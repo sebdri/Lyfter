@@ -52,7 +52,6 @@ while True:
         print(error)
 
 
-
 library.show_books()
 
 print(f"\nTotal books in the library: {library.total_books()}")

@@ -38,7 +38,6 @@ while True:
         print(error)
 
 
-# print("\n===== CAR INFORMATION =====")
-# print(car.car_information())
-# print(car.is_classic())
-print(car.brand)
+print("\n===== CAR INFORMATION =====")
+print(car.car_information())
+print(car.is_classic())
