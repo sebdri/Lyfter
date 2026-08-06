@@ -1,34 +1,34 @@
 #                                   ==={Herencia}===
 
 
-# class Vehicule:
-#     is_on = False
-#     wheel_number = 0
+class Vehicule:
+    is_on = False
+    wheel_number = 0
 
 
-#     def turn_on(self):
-#         self.is_on = True
-#         print(f'Vehicle with {self.wheel_number} wheels is on')
+    def turn_on(self):
+        self.is_on = True
+        print(f'Vehicle with {self.wheel_number} wheels is on')
 
-#     def turn_off(self):
-#         self.is_on = False
-#         print(f'Vehicle with {self.wheel_number} wheels is off')
-
-
-# class Car(Vehicule):
-#     wheel_number = 4
+    def turn_off(self):
+        self.is_on = False
+        print(f'Vehicle with {self.wheel_number} wheels is off')
 
 
-# class Bike(Vehicule):
-#     wheel_number = 2
+class Car(Vehicule):
+    wheel_number = 4
 
 
-# my_car = Car()
-# my_car.turn_on()
-# my_car.turn_off()
-# my_bike = Car()
-# my_bike.turn_on()
-# my_bike.turn_off()
+class Bike(Vehicule):
+    wheel_number = 2
+
+
+my_car = Car()
+my_car.turn_on()
+my_car.turn_off()
+my_bike = Car()
+my_bike.turn_on()
+my_bike.turn_off()
 
 
 
@@ -37,30 +37,30 @@
 #                                   ==={Herencia Multiple}===
 
 
-# class WalkMixin:
-#     def walk(self):
-#         print("I'm walking")
+class WalkMixin:
+    def walk(self):
+        print("I'm walking")
 
-# class RunMixin:
-#     def run(self):
-#         print("I'm running")
+class RunMixin:
+    def run(self):
+        print("I'm running")
 
-# class FlyMixin:
-#     def fly(self):
-#         print("I'm flying")
-
-
-
-# class superhuman(WalkMixin,RunMixin,FlyMixin): #Herencia multiple - se le agregan como atributos
-#     pass
+class FlyMixin:
+    def fly(self):
+        print("I'm flying")
 
 
 
+class superhuman(WalkMixin,RunMixin,FlyMixin): #Herencia multiple - se le agregan como atributos
+    pass
 
-# human = superhuman()
-# human.run()
-# human.fly()
-# human.walk()
+
+
+
+human = superhuman()
+human.run()
+human.fly()
+human.walk()
 
 
 #                                   ==={Clases abstractas}===
@@ -90,47 +90,47 @@ Pero mi clase computadora tienen todas esas caracteristicas compartidas
 
 Ejemplo:
 """
-# from abc import ABC, abstractmethod   #ESTO SIEMPRE DEBE DE IR YA QUE LAS CLASES ABSTRACTAS TIENEN QUE HEREDAR DE ABC
-# # TIENEN QUE TENER ABC COMO PARAMETRO
+from abc import ABC, abstractmethod   #ESTO SIEMPRE DEBE DE IR YA QUE LAS CLASES ABSTRACTAS TIENEN QUE HEREDAR DE ABC
+# TIENEN QUE TENER ABC COMO PARAMETRO
 
-# class Animal (ABC): #Clase animal
-#     def breath(self): #Todos los animales deben respirar
-#         pass 
+class Animal (ABC): #Clase animal
+    def breath(self): #Todos los animales deben respirar
+        pass 
 
-#     def born(self):
-#         pass
+    def born(self):
+        pass
 
-#     @abstractmethod # CON ESTO LE DECIMOS, SI USTED HEREDA DE CLASS ANIMAL USTED NECESITA CREAR SU PROPIA VERSION DE
-#     # metodo def reproduce
-#     def reproduce(self):
-#         #Todos los animales deben reporducirse para sobrevivir, pero pueden hacerlo de dif maneras
-#         pass
-
-
-
-# class AsexualAnimal(Animal): #Heredan de animal
-#     def reproduce(self): #Tienen el metodo reproducirse 
-#         print("Reproducing in an asexual manner")
-
-# class SexualAnimal(Animal):
-#     def reproduce(self):
-#         print(f"Reproducing in a sexual manner")
-
-# class OtherAnimal(Animal): #Hereda si, pero no tiene su metodo creado por lo que a la hora de crar el objeto dara error
-#     pass
+    @abstractmethod # CON ESTO LE DECIMOS, SI USTED HEREDA DE CLASS ANIMAL USTED NECESITA CREAR SU PROPIA VERSION DE
+    # metodo def reproduce
+    def reproduce(self):
+        #Todos los animales deben reporducirse para sobrevivir, pero pueden hacerlo de dif maneras
+        pass
 
 
 
-# asexual_animal =AsexualAnimal()
-# asexual_animal.reproduce()# -> Reproducing in an asexual manner 
+class AsexualAnimal(Animal): #Heredan de animal
+    def reproduce(self): #Tienen el metodo reproducirse 
+        print("Reproducing in an asexual manner")
 
-# sexual_animal_a =SexualAnimal()
-# sexual_animal_b =SexualAnimal()
-# sexual_animal.reproduce(sexual_animal_b)# -> Reproducing in a sexual manner with sexual_animal_b
+class SexualAnimal(Animal):
+    def reproduce(self):
+        print(f"Reproducing in a sexual manner")
 
-# # animal =Animal()# va a fallar porque Animal es una clase abstracta
+class OtherAnimal(Animal): #Hereda si, pero no tiene su metodo creado por lo que a la hora de crar el objeto dara error
+    pass
 
-# # other_animal =OtherAnimal()# va a fallar porque no se sobre-escribió el método reproduce
+
+
+asexual_animal =AsexualAnimal()
+asexual_animal.reproduce()# -> Reproducing in an asexual manner 
+
+sexual_animal_a =SexualAnimal()
+sexual_animal_b =SexualAnimal()
+sexual_animal.reproduce(sexual_animal_b)# -> Reproducing in a sexual manner with sexual_animal_b
+
+animal =Animal()# va a fallar porque Animal es una clase abstracta
+
+other_animal =OtherAnimal()# va a fallar porque no se sobre-escribió el método reproduce
 
 
 
