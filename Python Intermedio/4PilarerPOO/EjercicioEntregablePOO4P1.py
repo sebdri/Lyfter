@@ -8,26 +8,22 @@ class BankAccount:
     
     def withdraw_balance(self, amount):
 
-        while True:
-            
-            if self.balance > amount:
-                self.balance-=amount
-            else:
-
-                raise ValueError ("Inavlid operation")
+        if self.balance > amount:
+            self.balance-=amount
+                
+        else:
+            raise ValueError ("Inavlid operation")
 
 class SavingsAccount(BankAccount):
     def __init__(self, min_balance):
+        super().__init__()
         self.min_balance = min_balance
         
 
 
     def withdraw_balance(self, amount):
 
-        if amount < min_balance:
+        if self.balance - amount < self.minbalance:
             raise ValueError ("Invalid process")
 
-
-        
-        
-    
+        super().withdraw_balance(amount)
