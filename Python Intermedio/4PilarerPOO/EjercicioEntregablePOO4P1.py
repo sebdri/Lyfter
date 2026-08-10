@@ -23,7 +23,7 @@ class SavingsAccount(BankAccount):
 
     def withdraw_balance(self, amount):
 
-        if self.balance - amount < self.minbalance:
+        if self.balance - amount < self.min_balance:
             raise ValueError ("Invalid process")
 
         super().withdraw_balance(amount)
