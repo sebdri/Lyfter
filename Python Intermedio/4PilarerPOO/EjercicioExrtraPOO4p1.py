@@ -1,49 +1,49 @@
 class Employee:
+    def __init__(self, _name, _salary):
+        self._name = _name
+        self._salary = _salary
 
-    def __init__(self, name, salary):
-        self._name = name
-        self._salary = salary
+    @property
+    def name(self):
+        return self._name
 
     @property
     def salary(self):
         return self._salary
 
     @salary.setter
-    def salary(self, new_salary):
-        if new_salary < 0:
-            raise ValueError("Salary cannot be negative")
+    def salary(self , new_salary):
+        if new_salary<0:
+            raise ValueError('Salary must be grater than 0')
 
         self._salary = new_salary
 
+    def promote(self, promote):
+        self._salary = self._salary*(1+promote)
 
-#                 {Crear empleado}
 
 
-while True:
-    try:
-        name = str(input("Enter employee name: "))
-        break
-    except ValueError:
-        print("Invalid input")
-
+name = input('Enter your name: ')
 
 while True:
     try:
-        salary = float(input("Enter employee salary: "))
+        salary = float(input('Enter your current salary: '))
         break
+
     except ValueError:
-        print("Invalid input")
+        print('Invalid data')
 
 employee = Employee(name, salary)
 
-print("\nEmployee created!")
-print("Name:", employee._name)
-print("Salary:", employee.salary)
+print(f'Hi, dear {employee.name}, is a pleasure to have you here: ')
+print('Your current salary is: ', employee.salary)
 
 
-# Cambiar salario
-new_salary = float(input("\nEnter new salary: "))
+promotion = float(input('Enter your promotion percentaje:'))
 
-employee.salary = new_salary
+promotion = promotion / 100
 
-print("\nUpdated salary:", employee.salary)
+employee.promote(promotion)
+
+print(f'Your new salary is: {employee.salary}')
+
