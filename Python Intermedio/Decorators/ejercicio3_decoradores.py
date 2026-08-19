@@ -2,12 +2,18 @@ import datetime
 
 
 def only_age(func):
-    def wrapper(user):
-        if user<18:
-            raise ValueError("User must be grater than 18 years old")
-        else:
-            return func(User)
+    def wrapper(*args, **kwargs):
+        for i in args:
+            if not isinstance(i, User):
+                continue  #salta de valor al sigiente por ser validado 
+            
+
+            if i.age<18:
+                raise ValueError("User must be greater than 18 years old")
+        return func(*args,**kwargs)
     return wrapper
+
+
 
 class User:
     def __init__(self, date_of_birth):
