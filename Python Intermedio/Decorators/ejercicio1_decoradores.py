@@ -9,7 +9,9 @@ def print_parameters(func):
         print(f'Args parameters: {args}')
         print(f'Kwargs parameters: {kwargs}')
 
-        func(*args, **kwargs)
+        result = func(*args, **kwargs)
+        print(result )
+        return result 
 
     return wrapper
 
@@ -20,3 +22,4 @@ def function(a,b,c):
     return a+b+c
 
 function(9,13,c=2000)
+print (function)
