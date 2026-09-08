@@ -72,24 +72,36 @@ def delete_pet():
         print(f"🗑️Your pet {Dname} has been deleted")
 
     else:
-        print(f"Pet {Dname}not found")
+        print(f"Pet {Dname} not found")
 
 
 
 
 def count_pets():
     if len(my_pets) == 0:
-        return "No data yet"
+        print("No data yet")
     else:
         total = len(my_pets)
-        return f"📊 You have {total} pets"
+        print(f"📊 You have {total} pets")
 
 
 
-# def show_type():
-#     type_to_find = input("Enter the type you want to find: ")
+def show_type():
+    type_to_find = input("Enter the type you want to find: ")
 
-#     if type_to_find in my_pets
+    found = False
+    print(f"\n🔎 Pets of type '{type_to_find}':")
+
+    for name, data in my_pets.items():
+        age = data[0]
+        Ptype = data[1]
+
+        if Ptype.lower() == type_to_find.lower():
+            print(f"- {name}, {age} years old")
+            found = True
+
+    if not found:
+        print("No pets found of that type 😞")
 
 
 def exit():
@@ -113,8 +125,8 @@ def main():
             case "5":
                 count_pets()
             case "6":
-                # show_type() 
-                print("Function not avalable yet")
+                show_type() 
+                
             case "7":
                 exit()
 
