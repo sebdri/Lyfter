@@ -18,8 +18,8 @@ def print_parameters(func):
 
 
 @print_parameters
-def function(a,b,c):
-    return a+b+c
+def function(a,b,z):
+    return a+b+z
 
-function(9,13,c=2000)
+function(9,13,z=2000)
 print (function)
