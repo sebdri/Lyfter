@@ -2,7 +2,7 @@
 
 
 
-# I fixed the indentation of the add_passengers and remove_passengers methods
+# Fixed the indentation of the add_passengers and remove_passengers methods
 # so they are now inside the Bus_sebas class.
 
 
