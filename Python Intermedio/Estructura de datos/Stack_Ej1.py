@@ -38,8 +38,8 @@ class stack:
 
 
 s=stack()
-s.push("Sebas")
-s.push("Keity")
-s.push("Alejandra")
+s.push("Taekwondo")
+s.push("MMA")
+s.push("Surf")
 
 s.print_stack()
