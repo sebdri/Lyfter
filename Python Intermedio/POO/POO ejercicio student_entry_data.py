@@ -1,7 +1,7 @@
 #    ------------<CAMBIOS SOLICITADOS>------------
 
 
-# FOR-> student_top_three
+# FOR--> student_top_three
 
 # Fixed the attribute name in the print statement.
 # Changed student.student to student.name because the Student class
@@ -9,7 +9,7 @@
 
 #-----------------------------------------------------------------------------
 
-#FOR-> obtain_all_average
+#FOR--> obtain_all_average
 
 # Fixed the variable name used to calculate the overall average.
 # Replaced all_students with all_students_averages to match the

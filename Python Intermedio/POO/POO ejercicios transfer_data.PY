@@ -1,5 +1,5 @@
 import csv
-from Student import Student   # cambia el nombre si tu clase está en otro archivo
+from Student import Student   
 
 
 def export_data(file_path, students):
