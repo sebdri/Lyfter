@@ -1,32 +1,25 @@
 '''STACK'''
-
-
-
 class Node:
-    def __init__(self,data):
+    def __init__(self, data):
         self.data = data
-        self.next = Node
+        self.next = None
 
 
-
-class stack:
+class Stack:
     def __init__(self):
         self.top = None
 
-
-    def push(self,data):
+    def push(self, data):
         new_node = Node(data)
         new_node.next = self.top
         self.top = new_node
 
     def pop(self):
-        if Node is None:
+        if self.top is None:
             return None
-        data = self.top
+        data = self.top.data
         self.top = self.top.next
         return data
-
-
 
     def print_stack(self):
         current = self.top
@@ -35,11 +28,16 @@ class stack:
             current = current.next
 
 
-
-
-s=stack()
+s = Stack()
 s.push("Taekwondo")
 s.push("MMA")
 s.push("Surf")
 
+print("Stack:")
+s.print_stack()
+print("pop:", s.pop())
+print("pop:", s.pop())
+print("pop:", s.pop())
+print("pop (vacío):", s.pop())
+print("Stack vacío:")
 s.print_stack()
