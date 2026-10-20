@@ -7,12 +7,12 @@ def my_bubble_sort(list_to_order): # o(n)
             current = list_to_order[index]# o(1)
             next_value = list_to_order[index + 1]# o(1)
 
-            if current < next_value:# o(n)
+            if current > next_value:# o(n)
                 list_to_order[index] = next_value# o(1)
                 list_to_order[index + 1] =  current# o(1)
 
 
-test = [1,2,3,4,5,6,7,8,10,9]# o(n)
+test = [1,3,80,4,5,6,70,8,10,9]# o(n)
 my_bubble_sort(test)# o(n²)
 
 
