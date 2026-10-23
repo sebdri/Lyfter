@@ -1,7 +1,7 @@
 '''ALGORITMOS DE ORDENAMIENTO
     Big O notation'''
 
-def my_bubble_sort(list_to_order): # o(n)
+def my_bubble_sort(list_to_order): # O(n²)
     for out_index in range(len(list_to_order) - 1): # o(n)
         for index in range(len(list_to_order) - 1 - out_index):# o(n²)
             current = list_to_order[index]# o(1)
@@ -17,4 +17,5 @@ my_bubble_sort(test)# o(n²)
 
 
 print(test)# o(n)
+
 
