@@ -7,7 +7,7 @@ def my_bubble_sort(list_to_order): # O(n²)
             current = list_to_order[index]# o(1)
             next_value = list_to_order[index + 1]# o(1)
 
-            if current > next_value:# o(n)
+            if current > next_value:# o(1)
                 list_to_order[index] = next_value# o(1)
                 list_to_order[index + 1] =  current# o(1)
 
@@ -17,5 +17,4 @@ my_bubble_sort(test)# o(n²)
 
 
 print(test)# o(n)
-
 
