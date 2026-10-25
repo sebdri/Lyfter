@@ -15,66 +15,33 @@
 # # test = [1,3,80,4,5,6,70,8,10,9]# o(n)
 # # my_bubble_sort(test)# o(n²)
 
-
-# # print(test)# o(n)
-
-
-
-
-# def my_bubble_sort(list_to_order):
-#     for out_of_index in range(0,len(list_to_order)-1):
-#         for index in range(0, len(list_to_order) - 1 - out_of_index):
-#             current = list_to_order[index]
-#             next_current = list_to_order[index + 1]
-
-#         if current < next_current:
-#             list_to_order[index] = next_current
-#             list_to_order[index+1]= current
-
-
-
-# list = [1,2,5,89,100]
-# my_bubble_sort(list)
-
 # print(list)
 
 
 
 
 
-def bubble_sort_count(lista):
-    counter = 0
-    for index_out in range(0, len(lista) - 1):
-        for index in range(0,len(lista) - 1 - index_out):
+def bubble_sort_count(lista): #O(1)
+    counter = 0 #O(1)
+    for index_out in range(0, len(lista) - 1): #O(n)
+        for index in range(0,len(lista) - 1 - index_out): #o(n²)
             
-            current = lista[index]
-            new_current = lista [index + 1]
+            current = lista[index] #O(1)
+            new_current = lista [index + 1]#O(1)
 
-            print(f'Cantidad de intercambios:{counter}. Elemento actual: {current}, Elemento a la izquierda: {new_current}')
+            print(f'Cantidad de intercambios:{counter}. Elemento actual: {current}, Elemento a la izquierda: {new_current}') #O(1)
 
 
-            if current > new_current:
-                counter = counter + 1
-                lista[index] = new_current 
-                lista[index+1]= current
+            if current > new_current: #O(1)
+                counter = counter + 1 #o(n)
+                lista[index] = new_current #O(1)
+                lista[index+1]= current#O(1)
     
-    return counter
+    return counter#O(1)
 
 
 
-datos = [4, 2, 5, 1, 3,70]
-resultado = bubble_sort_count(datos)
+datos = [4, 2, 5, 1, 3,70]#O(1)
+resultado = bubble_sort_count(datos)#O(1)
 print(datos)        # [1, 2, 3, 4, 5]
 print(resultado)    # 6
-
-# datos = [1, 2, 3, 4, 5]
-# print(bubble_sort_count(datos))   # 0  (ya estaba ordenada)
-
-# datos = [5, 4, 3, 2, 1]
-# print(bubble_sort_count(datos))   # 10 (el peor caso)
-
-# datos = [7]
-# print(bubble_sort_count(datos))   # 0
-
-# datos = []
-# print(bubble_sort_count(datos))   # 0
