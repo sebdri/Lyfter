@@ -47,9 +47,7 @@ class FinanceManager:
         if not found:
             raise ValueError('The category does not exist')
 
-        self.movements.append(
-            Movement(title, number, official_name, m_type, date.today())
-        )
+        self.movements.append(Movement(title, number, official_name, m_type, date.today()))
 
     def calculate_totals(self):
         entries = 0
