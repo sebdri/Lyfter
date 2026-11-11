@@ -44,8 +44,8 @@ class TestingFinanceManage(unittest.TestCase):
     def test_if_amount_is_invalid(self):
         manager = FinanceManager()
         manager.add_category("Gasto innecesario")
-        with self.assertRaises(ValueError): #lo que está dentro de este bloque debe lanzar un ValueError
-            manager.add_movement("Gasto","cien","Gasto innecesario",INCOME) # La prueba pasa porque le estoy dando que es incorrecto con lo que si cumple con la funcion para cual ah sido creada
+        with self.assertRaises(ValueError): 
+            manager.add_movement("Gasto","cien","Gasto innecesario",INCOME) 
 
 #6
     def test_safe_valid_movement(self):
