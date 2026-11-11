@@ -56,8 +56,7 @@ t.insert(1)
 t.insert(6)
 t.insert(14)
 
-print("Structure:")
+print("Estructura del árbol:")
 t.print_tree()
-
-print("Data in order :")
+print("Valores ordenados:")
 t.print_inorder()
