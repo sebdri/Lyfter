@@ -1,5 +1,5 @@
 import json
-import os  
+import os  # Permite hacerle consultas a la computadora
 
 from logic import FinanceManager
 from model import Category, Movement
@@ -8,19 +8,20 @@ DATA_FILE = os.path.join(os.path.dirname(__file__), "finance_data.json")
 
 
 def save_data(manager, file_path=DATA_FILE):
-    categories_data = [] 
-    for category in manager.categories: 
-        categories_data.append(category.to_dict()) 
+    categories_data = [] # La bolsa vacia (lista)
+    for category in manager.categories: # Estoy revisando las hojas de categoria ficha por ficha
+        categories_data.append(category.to_dict()) #Agregando a la bolsa 
+
     movements_data = []
     for movement in manager.movements:
         movements_data.append(movement.to_dict())
 
-    data = {  
+    data = {  #Nueva bolsa (variable) donde vamos a guardar datos
         "categories": categories_data,
         "movements": movements_data,
     }
 
-    with open(file_path, "w", encoding="utf-8") as file: 
+    with open(file_path, "w", encoding="utf-8") as file:
         json.dump(data, file, indent=4, ensure_ascii=False)
 
 
