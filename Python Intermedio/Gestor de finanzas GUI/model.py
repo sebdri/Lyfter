@@ -1,3 +1,6 @@
+'''Model'''
+
+
 from datetime import date, datetime
 
 #---Constantes---

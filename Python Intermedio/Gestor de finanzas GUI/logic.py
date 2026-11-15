@@ -1,3 +1,5 @@
+'''Logic'''
+
 from datetime import date
 from model import Category, Movement, INCOME, EXPENSE
 

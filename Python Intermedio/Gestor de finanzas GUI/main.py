@@ -1,4 +1,4 @@
-
+'''Main'''
 
 import FreeSimpleGUI as sg
 from model import INCOME, EXPENSE, DATE_FORMAT
