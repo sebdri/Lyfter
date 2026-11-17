@@ -10,34 +10,35 @@ class FinanceManager:
         self.movements = []
 
     def add_category(self, name):
-        if name.strip() == '':
-            raise ValueError('The name cannot be empty')
+        name = name.strip()
+        if name == '':
+            raise ValueError('El nombre no puede estar vacío')
 
         for category in self.categories:
-            if category.name.lower() == name.lower():
-                raise ValueError('The category already exists')
+            if category.name.strip().lower() == name.lower():
+                raise ValueError('La categoría ya existe')
         self.categories.append(Category(name))
 
     def add_movement(self, title, amount, category, m_type):
         if not self.categories:
-            raise ValueError('There are no categories. Add one first')
+            raise ValueError('No hay categorías. Agregue una primero')
 
         # Regla para title
         if title.strip() == '':
-            raise ValueError('The title cannot be empty')
+            raise ValueError('El título no puede estar vacío')
 
         # Regla para m_type
         if m_type not in (INCOME, EXPENSE):
-            raise ValueError('Type must be Income or Expense')
+            raise ValueError('El tipo debe ser Ingreso o Gasto')
 
         # Regla para amount
         try:
             number = float(amount)
         except ValueError:
-            raise ValueError('The amount must be a number. Please try again')
+            raise ValueError('El monto debe ser un número. Intente de nuevo')
 
         if number <= 0:
-            raise ValueError('The amount must be greater than zero')
+            raise ValueError('El monto debe ser mayor que cero')
 
         # Regla para category
         found = False
@@ -47,7 +48,7 @@ class FinanceManager:
                 found = True
                 official_name = data.name
         if not found:
-            raise ValueError('The category does not exist')
+            raise ValueError('La categoría no existe')
 
         self.movements.append(Movement(title, number, official_name, m_type, date.today()))
 
@@ -66,63 +67,3 @@ class FinanceManager:
             "expenses": outcomes,
             "balance": balance
         }
-
-
-
-
-
-
-
-#---Pruebas---
-
-# if __name__ == "__main__":
-#     gestor = FinanceManager()
-
-#     try:
-#         gestor.add_movement("Salario", 1000, "Trabajo", INCOME)
-#     except ValueError as error:
-#         print("Error:", error)
-
-#     gestor.add_category("Trabajo")
-#     gestor.add_movement("Salario", 1000, "Trabajo", INCOME)
-#     print([str(m) for m in gestor.movements])
-
-#     try:
-#         gestor.add_movement("   ", 1000, "Trabajo", INCOME)
-#     except ValueError as error:
-#         print("Error:", error)
-#     try:
-#         gestor.add_movement("Pizza", 20, "Trabajo", "Ingresso")
-#     except ValueError as error:
-#         print("Error:", error)
-
-#     print(len(gestor.movements))
-
-
-#     for bad_amount in ["abc", "-5", "0"]:
-#         try:
-#             gestor.add_movement("Prueba", bad_amount, "Trabajo", INCOME)
-#         except ValueError as error:
-#             print("Error:", error)
-
-#     gestor.add_movement("Venta", "250", "Trabajo", INCOME)
-#     print(gestor.movements[-1].amount)
-#     try:
-#         gestor.add_movement("Viaje", 100, "Viajes", EXPENSE)
-#     except ValueError as error:
-#         print("Error:", error)
-
-#     gestor.add_movement("Bono", 50, "trabajo", INCOME)
-#     print(gestor.movements[-1])
-
-
-#     gestor2 = FinanceManager()
-#     print(gestor2.calculate_totals())   # vacío: todo en 0
-
-#     gestor2.add_category("Trabajo")
-#     gestor2.add_movement("Salario", 1000, "Trabajo", INCOME)
-#     gestor2.add_movement("Comida", 200, "Trabajo", EXPENSE)
-#     gestor2.add_movement("Ropa", 50, "Trabajo", EXPENSE)
-#     totals = gestor2.calculate_totals()
-#     print(totals)
-#     print(totals["balance"])
