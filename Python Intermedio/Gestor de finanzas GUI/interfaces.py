@@ -80,7 +80,7 @@ def movement_layout(category_names):
         labeled_input("Título:", "-TITLE-"),
         labeled_input("Monto:", "-AMOUNT-"),
         [sg.Text("Categoría:", size=(10, 1)),
-         sg.Combo(category_names, default_value=category_names[0],
+        sg.Combo(category_names, default_value=category_names[0],
                 key="-CATEGORY-", readonly=True, size=(23, 1))],
         save_cancel_buttons(),
     ]

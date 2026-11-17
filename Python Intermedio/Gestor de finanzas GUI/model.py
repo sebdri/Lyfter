@@ -47,3 +47,5 @@ class Movement:
 
     def __str__(self):
         return f'{self.title} | {self.amount} | {self.category} | {self.m_type} | {self.date}'
+
+

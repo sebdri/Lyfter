@@ -1,6 +1,6 @@
 '''Persistence'''
 import json
-import os  # Permite hacerle consultas a la computadora
+import os  
 
 from logic import FinanceManager
 from model import Category, Movement
@@ -9,15 +9,15 @@ DATA_FILE = os.path.join(os.path.dirname(__file__), "finance_data.json")
 
 
 def save_data(manager, file_path=DATA_FILE):
-    categories_data = []  # La bolsa vacía (lista)
-    for category in manager.categories:  # Revisando las categorías ficha por ficha
-        categories_data.append(category.to_dict())  # Agregando a la bolsa
+    categories_data = [] 
+    for category in manager.categories:  
+        categories_data.append(category.to_dict()) 
 
     movements_data = []
     for movement in manager.movements:
         movements_data.append(movement.to_dict())
 
-    data = {  # Nueva bolsa (variable) donde vamos a guardar datos
+    data = {  
         "categories": categories_data,
         "movements": movements_data,
     }
@@ -27,8 +27,7 @@ def save_data(manager, file_path=DATA_FILE):
 
 
 def load_data(file_path=DATA_FILE):
-    '''Carga el gestor desde el JSON. Si el archivo no existe, está vacío
-    o está dañado, devuelve un gestor vacío para que la app arranque igual.'''
+
     if not os.path.exists(file_path):
         return FinanceManager()
 
